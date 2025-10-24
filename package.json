@@ -1,0 +1,75 @@
+{
+  "name": "pytest-workspace-config",
+  "displayName": "Pytest Workspace Config",
+  "description": "Configure pytest testing arguments via workspace settings",
+  "version": "0.0.1",
+  "publisher": "pytest-config",
+
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Testing"
+  ],
+  "keywords": [
+    "pytest",
+    "testing",
+    "python",
+    "workspace",
+    "configuration",
+    "playwright"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/pytest-workspace-config"
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pytest-config.refreshConfig",
+        "title": "Refresh Pytest Config"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "pytest-config-container",
+          "title": "Pytest Config",
+          "icon": "resources/pytest-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "pytest-config-container": [
+        {
+          "id": "pytest-config-view",
+          "name": "Pytest Configuration",
+          "type": "webview",
+          "when": "workbenchState == workspace"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "package": "npx @vscode/vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.104.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.34.0",
+    "typescript": "^5.9.2",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
