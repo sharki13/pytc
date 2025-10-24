@@ -1,4 +1,4 @@
-# Pytest Workspace Config
+# pytc - PyTest (Workspace) Config
 
 A VS Code extension that provides a graphical interface to configure pytest testing arguments in your workspace settings.
 
