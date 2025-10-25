@@ -32,17 +32,8 @@
         "title": "Refresh Pytest Config"
       }
     ],
-    "viewsContainers": {
-      "activitybar": [
-        {
-          "id": "pytest-config-container",
-          "title": "Pytest Config",
-          "icon": "resources/pytest-icon.svg"
-        }
-      ]
-    },
     "views": {
-      "pytest-config-container": [
+      "test": [
         {
           "id": "pytest-config-view",
           "name": "Pytest Configuration",
